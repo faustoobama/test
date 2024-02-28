@@ -3,7 +3,7 @@ node{
   agent any
   
   stage('checkout scm'){
-    scm checkout
+    checkout scm
     sh 'git rev-parse --SHORT HEAD > .git/gitcommitid'
     gitcommit = readfile('.git/gitcommitid').trim()
   }
