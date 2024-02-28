@@ -1,5 +1,5 @@
 node{
-  df gitcommit
+  def gitcommit
   agent any
   
   stage('checkout scm'){
