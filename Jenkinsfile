@@ -1,7 +1,5 @@
 node{
   def gitcommit
-  agent any
-  
   stage('checkout scm'){
     checkout scm
     sh 'git rev-parse --SHORT HEAD > .git/gitcommitid'
