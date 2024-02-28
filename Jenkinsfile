@@ -14,8 +14,9 @@ node{
   }
   
   stage('docker build & push'){
-    docker.withRegistry('https://registry.hub.docker.com/','docker')
-    def image = docker.build('faustoobama/nodejsapp:${gitcommit}','.')
-    app.push()
+    docker.withRegistry('https://registry.hub.docker.com/','docker'){
+      def appimage = docker.build('faustoobama/nodejsapp:${gitcommit}','.')
+      app.push()
+    }
   }
 }
