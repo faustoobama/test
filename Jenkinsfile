@@ -3,7 +3,7 @@ node{
   stage('checkout scm'){
     checkout scm
     sh 'git rev-parse --SHORT HEAD > .git/gitcommitid'
-    gitcommit = readfile('.git/gitcommitid').trim()
+    gitcommit = readFile('.git/gitcommitid').trim()
   }
   
   stage('build only-dev & test'){
