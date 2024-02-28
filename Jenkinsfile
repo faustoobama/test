@@ -7,7 +7,7 @@ node{
   }
   
   stage('build only-dev & test'){
-    nodejs(nodejsInstallation: 'nodejs'){
+    nodejs(nodejsInstallationName: 'nodejs'){
       sh 'npm install --only-dev'
       sh 'npm install'
     }
